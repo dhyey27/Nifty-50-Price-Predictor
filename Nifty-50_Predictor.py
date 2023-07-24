@@ -181,9 +181,6 @@ class LinearRegressionModel:
         print('MSE_VALUE at random is ', MSE_VAL)
 
         def gradient():
-            """calculates gradient of for weights and biases
-
-            """
             n = len(X_train)
             predictions = LinearRegression(X_train)
             loss = y_train - predictions
