@@ -48,7 +48,8 @@ print(data.info())
 data['High'] = data['High'].astype('float64')
 data['VWAP'] = data['VWAP'].astype('float64')
 print(data.info())
-
+X = np.array(data.drop(['Date', 'Symbol', 'Series', 'Close'], axis=1))
+y = np.array(data['Close'])
 # Data Visualization
 
 print(data.corr())
@@ -56,8 +57,7 @@ print(data.corr())
 style.use('ggplot')
 
 print(data.describe())
-X = np.array(data.drop(['Date', 'Symbol', 'Series', 'Close'], axis=1))
-y = np.array(data['Close'])
+
 
 
 # splitting training and testing data
